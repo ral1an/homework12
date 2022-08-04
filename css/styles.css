@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrap {
+  width: 1320px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bcg_color_gray {
+  background-color: #E5E5E5;
+}
+
+.bcg_color_black {
+  background-color: #333333;
+}
+
+.header {
+  padding-top: 33px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 42px 0;
+}
+
+.header__contact,
+.nav-search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.green-logo-link {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #333333;
+  text-decoration: none;
+}
+
+.logo-link {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  color: #F2F2F2;
+  text-decoration: none;
+  background: #333333;
+  border-radius: 5px;
+}
+
+.comunication,
+.call,
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 62px;
+}
+
+.call {
+  gap: 0 11px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.icons {
+  gap: 0 17px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 40px;
+}
+
+.navigation-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #4F4F4F;
+  text-decoration: none;
+}
+
+.search-form {
+  position: relative;
+  display: inline-block;
+}
+
+.btn_search {
+  position: absolute;
+  top: 10px;
+  left: 275px;
+}
+
+.search {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #828282;
+  text-decoration: none;
+  background: #F2F2F2;
+  border: 1px solid #BDBDBD;
+  border-radius: 10px;
+  width: 345px;
+  height: 54px;
+  display: inline-block;
+}
+
+.back {
+  margin-top: 0;
+  margin-bottom: 44px;
+}
+
+.card {
+  background: #F9F9F9;
+  display: inline-block;
+  border: 1px solid #F2F2F2;
+  box-shadow: -8px -8px 15px #FFFFFF, 8px 8px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+}
+
+.social-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.footer {
+  padding-top: 100px;
+  padding-bottom: 132px;
+}

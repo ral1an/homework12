@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+@mixin px($sizel, $sizer) {
+    padding-left: $sizel;
+    padding-right: $sizer;
+}
+
+@mixin py($sizet, $sizeb) {
+    padding-top: $sizet;
+    padding-bottom: $sizeb;
+}
+
+@mixin mx($sizel, $sizer) {
+    margin-left: $sizel;
+    margin-right: $sizer;
+}
+
+@mixin my($sizet, $sizeb) {
+    margin-top: $sizet;
+    margin-bottom: $sizeb;
+}
+
+@mixin wrap($width, $wrapmr, $wrapml) {
+    width: $width;
+    margin-right: $wrapmr;
+    margin-left: $wrapml;
+}
+
+@mixin font($fw, $fs, $lh, $color, $textdecor) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    color: $color;
+    text-decoration: $textdecor;
+}
+
+.wrap {
+    @include wrap(1320px, auto, auto);
+}
+
+.bcg_color_gray {
+    background-color: #E5E5E5;
+}
+
+.bcg_color_black {
+    background-color:  #333333;
+}
+.header {
+    @include py(33px, 30px);
+    display: flex;
+    flex-direction: column;
+    gap: 42px 0;
+}
+
+.header__contact,
+.nav-search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.green-logo-link {
+    @include font(600, 24px, 29px, #333333, none);
+}
+
+.logo-link {
+    @include font(600, 18px, 21px, #F2F2F2, none);
+    background: #333333;
+    border-radius: 5px;
+}
+
+.comunication,
+.call,
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 62px;
+}
+
+.call {
+    gap: 0 11px;
+    @include font(400, 18px, 21px, #000000, none);
+}
+
+.icons {
+    gap: 0 17px;
+}
+
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 40px;
+}
+
+.navigation-link {
+    @include font(500, 18px, 21px, #4F4F4F, none);
+}
+
+.search-form {
+    position: relative;
+    display: inline-block;
+}
+
+.btn_search {
+    position: absolute;
+    top: 10px;
+    left: 275px;
+}
+
+.search {
+    @include font(400, 18px, 21px,#828282, none);
+    background: #F2F2F2;
+    border: 1px solid #BDBDBD;
+    border-radius: 10px;
+    width: 345px;
+    height: 54px;
+    display: inline-block;
+}
+
+.back {
+    @include my(0, 44px);
+}
+
+.card {
+    background: #F9F9F9;
+    display: inline-block;
+    border: 1px solid #F2F2F2;
+    box-shadow: -8px -8px 15px #FFFFFF, 8px 8px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+}
+
+.social-info {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-link {
+    @include font(500, 18px, 21px, #FFFFFF, none);
+}
+
+.footer {
+    @include py(100px, 132px);
+}
