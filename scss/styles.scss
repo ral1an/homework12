@@ -253,6 +253,7 @@ body {
 .card_options input[type="radio"]:checked + .card_option {
     border: 1px solid #3ecf5e;
     background-color: #d0ffb7;
+    padding: 2px 10px;
 }
 
 .card_option:hover {
@@ -304,6 +305,10 @@ body {
 }
 
 .page-link:active {
+    color: #219653;
+}
+
+.switcher-link-active {
     color: #219653;
 }
 
