@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 @mixin px($sizel, $sizer) {
     padding-left: $sizel;
     padding-right: $sizer;
@@ -45,7 +49,7 @@
 }
 
 .bcg_color_black {
-    background-color:  #333333;
+    background-color: #333333;
 }
 .header {
     @include py(33px, 30px);
@@ -89,6 +93,20 @@
     gap: 0 17px;
 }
 
+.bucket {
+    position: relative;
+}
+
+.number-purchases {
+    @include font(600, 12px, 15px, #FFFFFF, none);
+    @include py(2px, 3px);
+    @include px(7px, 7px);
+    position: absolute;
+    top: -9px;
+    left: 15px;
+    background: #06D10E;
+    border-radius: 10px;
+}
 
 .navigation {
     display: flex;
@@ -101,6 +119,11 @@
     @include font(500, 18px, 21px, #4F4F4F, none);
 }
 
+.arrow__down::after {
+    @include mx(7px, 0);
+    content: url('../images//arrow_down.png');
+}
+
 .search-form {
     position: relative;
     display: inline-block;
@@ -108,8 +131,9 @@
 
 .btn_search {
     position: absolute;
-    top: 10px;
-    left: 275px;
+    top: 15px;
+    left: 290px;
+    border: none;
 }
 
 .search {
@@ -122,22 +146,186 @@
     display: inline-block;
 }
 
+.section-offer {
+    @include py(75px, 100px);
+}
+
+.site-map {
+    display: flex;
+    align-items: center;
+    gap: 0 15px;
+    @include my(0, 30px);
+}
+
+.site-map-link{
+    @include font(500, 18px, 21px, #BDBDBD, none);
+}
+
+.arrow__green_left::before {
+    @include mx(11px, 0);
+    content: url('../images/arrow_green_left.png');
+}
+
 .back {
     @include my(0, 44px);
 }
 
+.back-link {
+    @include font(500, 20px, 24px, #333333, none);
+}
+
+.cards {
+    @include my(0, 50px);
+}
+
+.card-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-row:nth-child(1){
+    margin-bottom: 46px;
+}
+
 .card {
-    background: #F9F9F9;
+    @include py(20px, 30px);
+    @include px(20px, 20px);
+    background: #F2F2F2;
     display: inline-block;
     border: 1px solid #F2F2F2;
     box-shadow: -8px -8px 15px #FFFFFF, 8px 8px 15px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
+    width: 315px;
+    position: relative;
+}
+
+.card-img {
+    background: white;
+}
+
+.new_proposition {
+    position: absolute;
+    top: 10px;
+    left: 215px;
+    background: #333333;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    padding: 9px 16px;
+}
+
+.food-name {
+    @include font(600, 24px, 31px, #333333, none);
+}
+
+.food-description {
+    @include font(400, 16px, 21px, #828282, none);
+}
+
+.price {
+    @include font(700, 22px, 27px, #333333, none);
+}
+
+.card_options {
+    @include my(0, 25px);
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #4f4f4f;
+}
+
+.card_options input[type="radio"] {
+    display: none;
+}
+
+.card_option {
+    display: inline-block;
+    padding: 3px 11px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.card_options input[type="radio"]:checked + .card_option {
+    border: 1px solid #3ecf5e;
+    background-color: #d0ffb7;
+}
+
+.card_option:hover {
+    padding: 2px 10px;
+    background-color: #ffffff;
+    border: 1px solid #3ecf5e;
+}
+
+.card-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.more {
+    @include font(600, 18px, 21px, #FFFFFF, none);
+    @include px(32px, 32px);
+    @include py(12px, 12px);
+    background: #3FCF5E;
+    border: 1px solid rgba(5, 175, 52, 0.53);
+    border-radius: 10px;
+}
+
+.add-to-bucket {
+    position: relative;
+    @include py(9px, 9px);
+    @include px(9px, 9px);
+    border: 1px solid #BDBDBD;
+    border-radius: 10px;
+    background: #FFFFFF;
+}
+
+.picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-switcher {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px 20px;
+}
+
+.page-link {
+    @include font(500, 18px, 21px, #828282, none);
+}
+
+.page-link:active {
+    color: #219653;
 }
 
 .social-info {
     display:flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.social-links-grop1,
+.social-links-grop2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-links-grop1 {
+    gap: 0 47px;
+}
+
+.social-links-grop2 {
+    gap: 0 20px;
 }
 
 .social-link {
